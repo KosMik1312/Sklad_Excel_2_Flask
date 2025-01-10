@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Результаты анализа</title>
+    <meta charset="utf-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .download-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            display: inline-block;
+        }
+        .download-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Результаты анализа</h1>
+    
+    <table>
+        <tr>
+            <th>Дата</th>
+            <th>Наименование</th>
+            <th>Цена</th>
+        </tr>
+        {% for result in results %}
+        <tr>
+            <td>{{ result.date }}</td>
+            <td>{{ result.value }}</td>
+            <td>{{ result.price }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+    <a href="{{ url_for('download_file', filename=output_file) }}" class="download-btn">
+        Скачать Excel файл с результатами
+    </a>
+    
+    <p><a href="/">Вернуться на главную</a></p>
+</body>
+</html> 
