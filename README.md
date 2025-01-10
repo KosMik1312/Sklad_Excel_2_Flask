@@ -4,7 +4,7 @@
 
 ## Установка
 
-1. Клонируйте репозиторий: `git clone https://KosMik1312/Sklad_Excel_2_Flask.git`
+1. Клонируйте репозиторий: `git clone https://github.com/KosMik1312/Sklad_Excel_2_Flask.git`
 2. Установите зависимости: `pip install -r requirements.txt`
 3. Создайте папку `uploads` в корневой директории проекта
 
